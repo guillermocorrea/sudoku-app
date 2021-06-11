@@ -2,10 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './core/reportWebVitals';
 import { unregister } from './core';
+import { GlobalStyles, theme } from './styles';
+import { ThemeProvider } from 'styled-components';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div>Hello World</div>
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <div>Hello World</div>
+      </ThemeProvider>
+    </>
   </React.StrictMode>,
   document.getElementById('root')
 );
