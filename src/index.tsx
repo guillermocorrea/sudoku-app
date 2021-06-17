@@ -5,12 +5,19 @@ import { unregister } from './core';
 import { GlobalStyles, theme } from './styles';
 import { ThemeProvider } from 'styled-components';
 
+import { Content, Grid, Title, Card } from './components';
+
 ReactDOM.render(
   <React.StrictMode>
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <div>Hello World</div>
+        <Content>
+          <Title>Sudoku</Title>
+          <Card>
+            <Grid />
+          </Card>
+        </Content>
       </ThemeProvider>
     </>
   </React.StrictMode>,
